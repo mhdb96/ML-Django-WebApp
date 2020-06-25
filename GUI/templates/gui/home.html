@@ -1,5 +1,5 @@
 {% extends "gui/base.html" %} {% block content%}
-<div class="row">
+<div class="row" style="margin-top: 30px;">
   <div class="col-sm-12">
     <form method="post" action="/evaluate">
       {% csrf_token %}
@@ -28,7 +28,11 @@
         </select>
       </div>
       <a href="/evaluate"
-        ><button type="submit" class="btn btn-primary">
+        ><button
+          type="submit"
+          class="btn"
+          style="background-color: rgb(241, 90, 36); color: white;"
+        >
           Gönder
         </button></a
       >

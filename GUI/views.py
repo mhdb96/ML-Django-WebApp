@@ -19,7 +19,8 @@ algorithms = [{'name': 'Multilayer Perceptron', 'code': 'mlp'},
 def home(request):
     context = {
         'datasets': datasets,
-        'algorithms': algorithms
+        'algorithms': algorithms,
+        'title': 'Machine Learning Visualization'
     }
     return render(request, 'gui/home.html', context)
 
@@ -116,7 +117,8 @@ def evaluate(request):
         'test_acc': test_acc,
         'test_loss': test_loss,
         'model_name': model_name,
-        'dataset_name': dataset_name
+        'dataset_name': dataset_name,
+        'title': f'Results of {model_name} - MLV'
     }
 
     return render(request, 'gui/home.html', context)

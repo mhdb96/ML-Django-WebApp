@@ -83,12 +83,6 @@ jmespath==0.10.0
 joblib==0.15.1
 json5==0.9.1
 jsonschema==3.2.0
-jupyter==1.0.0
-jupyter-client==5.3.4
-jupyter-console==6.1.0
-jupyter-core==4.6.1
-jupyterlab==1.2.6
-jupyterlab-server==1.0.6
 Keras==2.3.1
 Keras-Applications==1.0.8
 Keras-Preprocessing==1.1.0
@@ -174,8 +168,6 @@ pywinpty==0.5.7
 PyYAML==5.3
 pyzmq==18.1.1
 QDarkStyle==2.8
-QtAwesome==0.6.1
-qtconsole==4.6.0
 requests==2.22.0
 rope==0.16.0
 ruamel-yaml==0.15.87
@@ -193,14 +185,6 @@ snowballstemmer==2.0.0
 sortedcollections==1.1.2
 sortedcontainers==2.1.0
 soupsieve==1.9.5
-Sphinx==2.4.0
-sphinxcontrib-applehelp==1.0.1
-sphinxcontrib-devhelp==1.0.1
-sphinxcontrib-htmlhelp==1.0.2
-sphinxcontrib-jsmath==1.0.1
-sphinxcontrib-qthelp==1.0.2
-sphinxcontrib-serializinghtml==1.1.3
-sphinxcontrib-websupport==1.2.0
 spyder==4.0.1
 spyder-kernels==1.8.1
 SQLAlchemy==1.3.13

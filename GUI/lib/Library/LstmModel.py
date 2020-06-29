@@ -35,11 +35,13 @@ class LstmModel (IModel):
     VOCAB_SIZE = 0
     INPUT_LENGTH = 0
 
-    def __init__(self, processor: IProcessor, dataset: IDataset, test_size=None):
+    def __init__(self, processor: IProcessor, dataset: IDataset, test_size=None, batch=None):
         self.processor = processor
         self.dataset = dataset
         if test_size != None:
             self.TEST_SIZE = test_size
+        if batch != None:
+            self.BATCH_SIZE = batch
 
     def __str__(self):
         return 'LSTM'

@@ -34,6 +34,7 @@ def evaluate(request):
     dataset = request.POST.get('dataset')
     algorithm = request.POST.get('algorithm')
     test_size = request.POST.get('test_size')
+    batch = int(request.POST.get('batch'))
 
     TEST_SIZE = 0
     if test_size == 't20':
@@ -74,22 +75,22 @@ def evaluate(request):
     Model = ''
     if algorithm == 'mlp':
         from .lib.Library.MlpModel import MlpModel
-        Model = MlpModel(Processor, Dataset, TEST_SIZE)
+        Model = MlpModel(Processor, Dataset, TEST_SIZE, batch)
     elif algorithm == 'ol':
         from .lib.Library.OneLayerModel import OneLayerModel
-        Model = OneLayerModel(Processor, Dataset, TEST_SIZE)
+        Model = OneLayerModel(Processor, Dataset, TEST_SIZE, batch)
     elif algorithm == 'cnn':
         from .lib.Library.CnnModel import CnnModel
-        Model = CnnModel(Processor, Dataset, TEST_SIZE)
+        Model = CnnModel(Processor, Dataset, TEST_SIZE, batch)
     elif algorithm == 'rnn':
         from .lib.Library.RnnModel import RnnModel
-        Model = RnnModel(Processor, Dataset, TEST_SIZE)
+        Model = RnnModel(Processor, Dataset, TEST_SIZE, batch)
     elif algorithm == 'lstm':
         from .lib.Library.LstmModel import LstmModel
-        Model = LstmModel(Processor, Dataset, TEST_SIZE)
+        Model = LstmModel(Processor, Dataset, TEST_SIZE, batch)
     else:
         from .lib.Library.FastTextModel import FastTextModel
-        Model = FastTextModel(Processor, Dataset, TEST_SIZE)
+        Model = FastTextModel(Processor, Dataset, TEST_SIZE, batch)
 
     history = Model.evaluate()
     epochs = []
